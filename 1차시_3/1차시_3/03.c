@@ -3,13 +3,14 @@
 
 int main(void) {
 
-	int i, n;
+	int a, b, c;
 
-	scanf("%d", &n);
+	scanf("%d %d %d", &a, &b, &c);
 
-	for (i = 1; i < 10; i++)
-		printf("%d * %d = %d\n", n, i, n * i);
-	
+	printf("%d\n", (a + b) % c);
+	printf("%d\n", ((a % c) + (b % c)) % c);
+	printf("%d\n", (a * b) % c);
+	printf("%d\n", ((a % c) * (b % c)) % c);
 
 	return 0;
 }
